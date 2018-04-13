@@ -13,7 +13,13 @@ fungerar för flera kodrader. */
 ### Variabler
 En variabel deklareras genom att ange variabeltypen följt av ett namn (ange relevanta namn för enkelhetens skull) sedan ett =-teken och slutligen värdet som variabeln ska ha. Så här ser variabler ut i en kodfil.
 ```cpp
-int led = 13;
+const int led = 13;
+```
+Notera att vi har lagt till const framför variabeltypen. Detta betyder att variabeln är en konstant, det vill säga att den inte kommer att ändras. En LED pin, som i exemplet ovan kommer ju inte att ändras.
+
+I exemplet nedan kan vi se en sensors värde, detta värde kommer ju att ändras beroende på t.ex en potentiometer och vi använder därför inte const.
+```cpp
+int sensorValue = 0;
 ```
 
 ### Loop
