@@ -11,7 +11,7 @@ fungerar för flera kodrader. */
 ```
 
 ### Variabler
-En variabel deklareras genom att ange variabeltypen följt av ett namn (ange relevanta namn för enkelhetens skull) sedan ett =-teken och slutligen värdet som variabeln ska ha. Så här ser variabler ut i en kodfil.
+En variabel deklareras genom att ange variabeltypen följt av ett namn (ange relevanta namn för enkelhetens skull) sedan ett `=`-tecken och slutligen värdet som variabeln ska ha. Så här ser variabler ut i en kodfil.
 ```cpp
 const int led = 13;
 ```
