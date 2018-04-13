@@ -23,9 +23,20 @@ int sensorValue = 0;
 ```
 
 ### Loop
-Loop metoden körs om och om igen i all oändlighet. Så här ser loop-metod ut i en kodfil.
+Loop-metoden körs om och om igen i all oändlighet. Så här ser loop-metod ut i en kodfil.
 ```cpp
 void Loop() {
   // Skriv koden som ska upprepas här.
 }
 ```
+
+Om du vill att koden i loop-metoden ska köras t.ex varje sekund lägger du till kommandot `delay` med värdet angivet i millisekunder.
+1 sekund = 1000 millisekunder.
+```cpp
+void loop() {
+  // Skriv koden som ska upprepas här.
+  delay(1000);
+}
+```
+
+Notera att kommandon alltid har sina värden inom paranteser. Antalet värden och vilka typer av värden som ska skrivas beror på vilket kommando det är.
