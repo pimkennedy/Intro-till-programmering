@@ -1,5 +1,9 @@
-# Intro-till-programmering
+# Intro till programmering
 Detta projekt är gjort för att förenkla programmeringen för min klass i kursen teknologi.
+Språket som skrivs här är en förenklad version av `C` som används i Arduinoutveckling.
+Personer som har bidragit till detta:
+- `Pim Kennedy`
+- `Filip Manzi`
 
 ### Kommentarer
 Kommentarer är text som inte kommer att köras av programmet. Oftast använder man kommentarer för att få en struktur på sin kod. Så här ser kommentarer ut i en kodfil.
