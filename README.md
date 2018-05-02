@@ -26,10 +26,19 @@ I exemplet nedan kan vi se en sensors värde, detta värde kommer ju att ändras
 int sensorValue = 0;
 ```
 
+### Setup
+Setup-metoden körs endast en gång, innan `loop`-metoden. Meningen med setup-metoden är att köra kod som används vid konfiguration förinställning, d.v.s något som Arduinobrädan behöver veta innan den kan t.ex hantera olika PIN-portar.
+Nedan ser du ett exempel på hur setup-metoden används, där vi konfigurerar (berättar för Arduinobrädan) att PIN-port 3 ska vara en så kallad OUTPUT. När vi har berättat detta till Arduinobrädan behöver vi inte berätta detta mer och det är därför vi inte kör koden i en loop-metod. Om du undrar hur pinMode fungerar kan du se mer i sektionen `Konfiguration`.
+```cpp
+void setup() {
+  pinMode(3, OUTPUT);
+}
+```
+
 ### Loop
 Loop-metoden körs om och om igen i all oändlighet. Så här ser loop-metod ut i en kodfil.
 ```cpp
-void Loop() {
+void loop() {
   // Skriv koden som ska upprepas här.
 }
 ```
@@ -44,3 +53,12 @@ void loop() {
 ```
 
 Notera att kommandon alltid har sina värden inom paranteser. Antalet värden och vilka typer av värden som ska skrivas beror på vilket kommando det är. Efter parantesen berättar vi att vi är klara med ett semikolon `;`.
+
+### Konfiguration
+Tidigare pratade vi om hur vi konfigurerar (berättar till Arduinobrädan) olika kommandon i en så kallad `setup`-metod. De vanligaste kommandon ska vi nu gå igenom.
+
+#### pinMode
+pinMode kommandot ser generellt ut som i koden nedan där `<PIN-port>` är vilken PIN-port vi vill konfigurera och `<Läge>` är vilket läge porten ska konfigureras i, d.v.s antingen `OUTPUT` (skicka signal) eller `INPUT` (ta emot signal). När vi gjort detta vet Arduinobrädan vad den kan förvänta sig från denna PIN-port.
+```cpp
+pinMode(<PIN-port>, <Läge>);
+```
